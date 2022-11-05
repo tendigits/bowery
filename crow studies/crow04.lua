@@ -17,6 +17,7 @@ function startdrone()
 end
 
 function init()
+	ii.jf.mode(1)
 	input[1]{mode = 'change', direction = 'rising'}
 	input[1].change = startdrone
 end
