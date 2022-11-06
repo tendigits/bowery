@@ -27,11 +27,14 @@ function startnotes()
 end
 
 function init()
+	-- put jf into synth mode
 	ii.jf.mode(1)
+	-- set voices to 0 level to start
 	ii.jf.play_voice(1,0,0)
 	ii.jf.play_voice(2,0,0)
 	ii.jf.play_voice(3,0,0)
 	ii.jf.play_voice(4,0,0)
+	-- do the note function on each beat
 	input[1]{mode = 'change', direction = 'rising'}
 	input[1].change = startnotes
 end
